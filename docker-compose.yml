@@ -1,0 +1,10 @@
+api:
+  container_name: api
+  build: ./api
+  ports:
+   - "9000:9000"
+web:
+  container_name: web1
+  build: .
+  ports:
+   - "8080:8080"
