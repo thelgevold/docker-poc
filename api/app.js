@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
 
-app.get('/api', function (req, res) {
-  res.json('Hello World!');
+app.get('/api/cars', function (req, res) {
+  res.json(['BMW', 'Mercedes-Benz', 'Lamborghini', 'Ferrari', 'Maserati']);
 });
 
 const port = process.env.PORT || 9000;

@@ -12,6 +12,6 @@ ADD web /var/www/html/
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 # Expose ports
-EXPOSE 8080
+EXPOSE 80
 
 CMD service nginx start

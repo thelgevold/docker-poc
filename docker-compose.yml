@@ -1,10 +1,21 @@
-api:
-  container_name: api
-  build: ./api
-  ports:
-   - "9000:9000"
-web:
-  container_name: web1
-  build: .
-  ports:
-   - "8080:8080"
+version: "3"
+
+networks:
+  corp:
+    driver: bridge
+
+services:
+  api:
+    container_name: api
+    networks:
+      - corp
+    build: ./api
+    ports:
+      - "9000:9000"
+  web:
+    container_name: web1
+    networks:
+      - corp
+    build: .
+    ports:
+      - "80:80"
