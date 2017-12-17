@@ -5,15 +5,29 @@ networks:
     driver: bridge
 
 services:
-  api:
-    container_name: api
+  api0:
+    container_name: api0
     networks:
       - corp
     build: ./api
     ports:
-      - "9000:9000"
+      - "9001:9000"
+  api1:
+    container_name: api1
+    networks:
+      - corp
+    build: ./api
+    ports:
+      - "9002:9000"
+  api2:
+    container_name: api2
+    networks:
+      - corp
+    build: ./api
+    ports:
+      - "9003:9000"        
   web:
-    container_name: web1
+    container_name: web0
     networks:
       - corp
     build: .
