@@ -27,9 +27,9 @@ services:
     ports:
       - "9003:9000"        
   web:
-    container_name: web0
+    container_name: web
     networks:
       - corp
-    build: .
+    build: ./web
     ports:
       - "80:80"
