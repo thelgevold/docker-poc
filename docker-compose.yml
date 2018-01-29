@@ -31,5 +31,8 @@ services:
     networks:
       - corp
     build: ./web
+    volumes:
+      - ./web:/usr/share/nginx/html
+      - ./web:/var/www/html
     ports:
       - "80:80"
